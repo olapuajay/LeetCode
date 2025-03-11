@@ -5,15 +5,13 @@ class Solution {
         while(start < end) {
             int sum = nums[start] + nums[end];
             if(sum == target) {
-                res[0] = start + 1;
-                res[1] = end + 1;
-                break;
+                return new int[]{start + 1, end + 1};
             } else if(sum < target) {
                 start++;
             } else {
                 end--;
             }
         }
-        return res;
+        return new int[]{};
     }
 }
